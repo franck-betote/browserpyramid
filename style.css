@@ -1029,8 +1029,13 @@ footer {
   display: block;
 }
 
+.hero-headline .line3 {
+  font-size: clamp(1.4rem, 3.8vw, 2.6rem);
+  display: block;
+}
+
 .hero-headline .brand-word {
-  color: #0D6B3E;
+  color: #22c55e;
 }
 
 /* ===== FAQ SECTION ===== */
@@ -1236,6 +1241,10 @@ footer {
     font-size: clamp(1.6rem, 5vw, 2.2rem);
   }
 
+  .hero-headline .line3 {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
   .hero-subtitle {
     font-size: 0.95rem;
     padding: 0 10px;
@@ -1414,6 +1423,10 @@ footer {
     font-size: clamp(1.4rem, 5.5vw, 1.8rem);
   }
 
+  .hero-headline .line3 {
+    font-size: clamp(1.4rem, 5.5vw, 1.8rem);
+  }
+
   .hero-subtitle {
     font-size: 0.875rem;
     line-height: 1.6;
@@ -1571,6 +1584,10 @@ footer {
   }
 
   .hero-headline .line2 {
+    font-size: clamp(1.2rem, 6vw, 1.6rem);
+  }
+
+  .hero-headline .line3 {
     font-size: clamp(1.2rem, 6vw, 1.6rem);
   }
 
