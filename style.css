@@ -1064,6 +1064,7 @@ footer {
   text-transform: uppercase;
   font-size: clamp(2rem, 4.5vw, 5rem);
   /* s'adapte à la largeur de l'écran */
+  color: #022c1a;
 }
 
 /* Force les trois lignes sur PC */
@@ -1084,11 +1085,7 @@ footer {
 
 .hero-headline .line-3 {
   font-size: clamp(1.8rem, 3.5vw, 3rem);
-  color: #064E2B;
-}
-
-.brand-word {
-  color: #064E2B;
+  color: #022c1a;
 }
 
 /* ✅ Ajoute ça — forcer chaque ligne en block sur desktop */
@@ -1096,7 +1093,7 @@ footer {
   display: block;
 }
 
-.hero-headline .brand-word {
+.hero-headline .green-word {
   color: #22c55e;
 }
 
