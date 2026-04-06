@@ -27,12 +27,11 @@
         <a href="#ecosystem-3d" class="text-sm font-medium text-em-800 hover:text-em-700 transition-colors"
           data-i18n="nav.ecosystem">Écosystème</a>
         <!-- Language Toggle Button -->
-        <button id="langToggle"
-          class="lang-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-em-200 text-sm font-medium text-em-800 hover:bg-em-50 transition-colors"
-          type="button">
-          <span class="material-icons" style="font-size:16px">language</span>
-          <span id="langLabel">FR</span>
-        </button>
+        <div class="lang-toggle" id="langToggle" role="button" tabindex="0">
+          <div class="lang-slider" id="langSlider"></div>
+          <span class="lang-option active" id="langFR" data-lang="fr">FR</span>
+          <span class="lang-option" id="langEN" data-lang="en">EN</span>
+        </div>
         <a href="#cta"
           class="flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-br from-em-900 to-em-700 text-white text-sm font-semibold shadow-[0_4px_14px_rgba(13,107,62,.3)] hover:-translate-y-0.5 transition-all"
           data-i18n="nav.download">
@@ -100,7 +99,7 @@
       <!-- Headline -->
       <h1 class="hero-headline">
         <span class="line-1">PYRAMID <span class="green-word" data-i18n="hero.browser">BROWSER</span></span>
-        <span class="line-2" data-i18n="hero.line2">POUR UNE NAVIGATION ULTRA-RAPIDE,</span>
+        <span class="line-2" data-i18n="hero.line2">POUR UNE NAVIGATION ULTRA-RAPIDE</span>
         <span class="line-3" data-i18n="hero.line3">SÉCURISÉE ET OPTIMISÉE SUR LE WEB</span>
       </h1>
 
@@ -786,15 +785,33 @@
     // Language toggle button
     document.addEventListener('DOMContentLoaded', () => {
       const langToggle = document.getElementById('langToggle');
+      const langSlider = document.getElementById('langSlider');
+      const langFR = document.getElementById('langFR');
+      const langEN = document.getElementById('langEN');
+
+      function updateToggle(lang) {
+        if (lang === 'en') {
+          langSlider.classList.add('right');
+          langFR.classList.remove('active');
+          langEN.classList.add('active');
+        } else {
+          langSlider.classList.remove('right');
+          langFR.classList.add('active');
+          langEN.classList.remove('active');
+        }
+      }
+
       if (langToggle) {
         langToggle.addEventListener('click', () => {
           const newLang = currentLang === 'fr' ? 'en' : 'fr';
           applyTranslations(newLang);
+          updateToggle(newLang);
         });
       }
 
       // Apply saved language on load
       applyTranslations(currentLang);
+      updateToggle(currentLang);
     });
 
     // ===== EXISTING SCRIPTS =====

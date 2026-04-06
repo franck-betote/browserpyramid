@@ -10,25 +10,56 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Language Toggle Button */
-.lang-btn {
+/* Language Toggle Button - Sliding Pill */
+.lang-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 6px 12px;
-  border-radius: 8px;
+  position: relative;
+  background: #f0fdf4;
   border: 1px solid #d1fae5;
-  background: transparent;
-  color: #0D6B3E;
-  font-size: 0.85rem;
-  font-weight: 500;
+  border-radius: 99px;
+  padding: 3px;
   cursor: pointer;
+  width: 96px;
+  height: 34px;
+  user-select: none;
   transition: all 0.2s ease;
 }
 
-.lang-btn:hover {
-  background: #ecfdf5;
-  border-color: #6ee7b7;
+.lang-slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 43px;
+  height: 26px;
+  background: linear-gradient(135deg, #064E2B, #1A9E5C);
+  border-radius: 99px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(13, 107, 62, 0.3);
+  z-index: 1;
+}
+
+.lang-slider.right {
+  transform: translateX(45px);
+}
+
+.lang-option {
+  position: relative;
+  z-index: 2;
+  width: 43px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0D6B3E;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.lang-option.active {
+  color: #ffffff;
 }
 
 p {
