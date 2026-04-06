@@ -1068,26 +1068,24 @@ footer {
   color: #064E2B;
 }
 
-.hero-headline .line-1 b,
-.hero-headline .line-1 span:last-child {
-  color: #2ECC80;
-  /* Ton vert clair pour "BROWSER" */
+/* ✅ Ajoute ça — forcer chaque ligne en block sur desktop */
+.hero-headline span[class^="line-"] {
+  display: block;
 }
 
-/* Ajustement spécifique pour éviter que ça ne devienne trop petit sur mobile */
+.hero-headline .brand-word {
+  color: #22c55e;
+}
+
+/* Mobile : laisser couler naturellement */
 @media (max-width: 768px) {
   .hero-headline span[class^="line-"] {
     display: inline;
-    /* Laisse le texte couler naturellement sur petit écran */
   }
 
   .hero-headline {
     line-height: 1.3;
   }
-}
-
-.hero-headline .brand-word {
-  color: #22c55e;
 }
 
 /* ===== FAQ SECTION ===== */
