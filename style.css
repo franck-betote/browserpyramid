@@ -10,6 +10,27 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* Language Toggle Button */
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1fae5;
+  background: transparent;
+  color: #0D6B3E;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  background: #ecfdf5;
+  border-color: #6ee7b7;
+}
+
 p {
   color: #000000;
 }
@@ -1041,6 +1062,8 @@ footer {
   line-height: 1.1;
   /* Réduit l'espace entre les lignes pour un look plus compact/premium */
   text-transform: uppercase;
+  font-size: clamp(2rem, 4.5vw, 5rem);
+  /* s'adapte à la largeur de l'écran */
 }
 
 /* Force les trois lignes sur PC */
