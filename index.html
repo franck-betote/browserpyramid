@@ -147,44 +147,84 @@
 
   <!-- DEVICE PREVIEWS -->
   <div class="animate-fade-up-4 mt-8 relative z-10 flex justify-center">
-    <div class="device-scene" style="gap:30px;padding:20px;transform-origin:center;animation:none">
+    <div class="device-scene" style="gap:40px;padding:32px;transform-origin:center">
       <!-- TABLET -->
-      <div style="position:relative;transform:scale(1)">
-        <div class="save-badge" style="font-size:.7rem;padding:6px 12px;top:-10px;right:-10px">⚡ <span
-            data-i18n="device.data_save">-60% data</span></div>
-        <div
-          style="background:linear-gradient(145deg,#3a3a3a,#1a1a1a);border-radius:18px;padding:10px;box-shadow:0 16px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.1);position:relative;width:320px">
-          <div
-            style="position:absolute;top:5px;left:50%;transform:translateX(-50%);width:5px;height:5px;border-radius:50%;background:#111">
-          </div>
-          <div
-            style="background:linear-gradient(180deg,#0f0f0f,#0a0a0a);border-radius:10px;padding:5px;overflow:hidden;box-shadow:inset 0 1px 4px rgba(0,0,0,.5)">
-            <img src="starpage.png" alt="Pyramid Star Page"
-              style="width:100%;height:auto;display:block;border-radius:6px" />
-          </div>
-          <div style="width:24px;height:3px;background:rgba(255,255,255,.12);border-radius:2px;margin:8px auto 0"></div>
-        </div>
-        <div class="speed-badge"
-          style="font-size:.7rem;padding:6px 12px;bottom:-10px;left:50%;transform:translateX(-50%)">🚀 <span
-            data-i18n="device.faster">50% plus rapide</span></div>
-      </div>
-      <!-- MOBILE -->
-      <div style="position:relative;transform:scale(1)">
-        <div
-          style="background:linear-gradient(145deg,#3a3a3a,#1a1a1a);border-radius:24px;padding:8px;box-shadow:0 16px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.1);position:relative;width:140px;height:280px">
-          <div
-            style="position:absolute;top:6px;left:50%;transform:translateX(-50%);width:60px;height:16px;background:#111;border-radius:10px;z-index:10">
-            <div
-              style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:#1a3a2a">
+      <div style="position:relative;transform:scale(1.3)">
+        <div class="save-badge" style="font-size:.75rem;padding:7px 16px">⚡ <span data-i18n="device.data_save">-60%
+            data</span></div>
+        <div class="tablet-frame" style="width:380px;height:280px;border-radius:28px;padding:16px">
+          <div class="tablet-screen" style="display:flex;flex-direction:column;height:100%">
+            <div class="b-chrome">
+              <div class="b-dots"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span
+                  style="background:#28c840"></span></div>
+              <div class="b-bar"><span class="b-lock">🔒</span><span class="b-url">pyramidbrowser.cm/accueil</span>
+              </div>
+            </div>
+            <div class="b-body" style="display:flex;flex-direction:column;flex:1">
+              <div class="ui-banner">
+                <div class="ui-banner-logo"></div>
+                <div class="ui-banner-text"></div>
+              </div>
+              <div class="ui-grid">
+                <div class="ui-cell"></div>
+                <div class="ui-cell"></div>
+                <div class="ui-cell"></div>
+                <div class="ui-cell"></div>
+              </div>
+              <div class="ui-text" style="width:80%"></div>
+              <div class="ui-text g"></div>
+              <div class="ui-row">
+                <div class="ui-card">
+                  <div class="ui-card-img"></div>
+                  <div class="ui-card-line"></div>
+                  <div class="ui-card-line g"></div>
+                </div>
+                <div class="ui-card">
+                  <div class="ui-card-img" style="background:linear-gradient(135deg,#d1fae5,#6ee7b7)"></div>
+                  <div class="ui-card-line"></div>
+                  <div class="ui-card-line g"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div
-            style="background:linear-gradient(180deg,#0f0f0f,#0a0a0a);border-radius:16px;padding:3px;height:100%;overflow:hidden;box-shadow:inset 0 1px 4px rgba(0,0,0,.5)">
-            <img src="starpage.png" alt="Pyramid Star Page Mobile"
-              style="width:100%;height:100%;object-fit:cover;border-radius:13px" />
+        </div>
+        <div class="speed-badge" style="font-size:.75rem;padding:7px 16px">🚀 <span data-i18n="device.faster">50% plus
+            rapide</span></div>
+      </div>
+      <!-- MOBILE -->
+      <div style="position:relative;transform:scale(1.3)">
+        <div class="mobile-frame" style="width:140px;height:280px;border-radius:36px;padding:0 12px 12px">
+          <div class="mobile-notch">
+            <div class="mobile-notch-pill"></div>
           </div>
-          <div
-            style="position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:40px;height:3px;background:rgba(255,255,255,.15);border-radius:2px">
+          <div class="mobile-screen" style="display:flex;flex-direction:column">
+            <div class="b-chrome" style="padding:5px 6px">
+              <div class="b-bar"><span class="b-lock" style="font-size:7px">🔒</span><span class="b-url"
+                  style="font-size:5.5px">pyramidbrowser.cm</span></div>
+            </div>
+            <div class="b-body" style="padding:6px;flex:1;display:flex;flex-direction:column;gap:5px">
+              <div class="ui-banner" style="height:16px">
+                <div class="ui-banner-logo"></div>
+                <div class="ui-banner-text" style="width:35px"></div>
+              </div>
+              <div class="ui-cell"
+                style="height:36px;border-radius:6px;background:linear-gradient(135deg,#d1fae5,#a7f3d0)"></div>
+              <div class="ui-text" style="width:90%"></div>
+              <div class="ui-text g"></div>
+              <div class="ui-row" style="gap:4px">
+                <div class="ui-card" style="flex:1">
+                  <div class="ui-card-img" style="height:12px"></div>
+                  <div class="ui-card-line" style="margin:3px 4px 2px"></div>
+                </div>
+                <div class="ui-card" style="flex:1">
+                  <div class="ui-card-img" style="height:12px;background:linear-gradient(135deg,#d1fae5,#6ee7b7)">
+                  </div>
+                  <div class="ui-card-line" style="margin:3px 4px 2px"></div>
+                </div>
+              </div>
+              <div class="ui-text"></div>
+              <div class="ui-text g"></div>
+            </div>
           </div>
         </div>
       </div>
