@@ -242,48 +242,13 @@
 
       <!-- Block 1: Visual LEFT, Text RIGHT -->
       <div class="why-block reveal">
-        <div class="why-visual vis-green" style="order:0">
-          <div class="illus-wrap">
-            <!-- Performance SVG -->
-            <svg width="280" height="200" viewBox="0 0 280 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <filter id="s1">
-                  <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#064E2B" flood-opacity=".12" />
-                </filter>
-                <linearGradient id="spd" x1="75" y1="130" x2="205" y2="130">
-                  <stop offset="0%" stop-color="#064E2B" />
-                  <stop offset="100%" stop-color="#2ECC80" />
-                </linearGradient>
-              </defs>
-              <!-- Background card -->
-              <rect x="20" y="20" width="240" height="160" rx="18" fill="white" opacity=".85" filter="url(#s1)" />
-              <!-- Speedometer arc -->
-              <path d="M 140 130 m -65 0 a 65 65 0 0 1 130 0" stroke="#e5e7eb" stroke-width="14" fill="none"
-                stroke-linecap="round" />
-              <path d="M 140 130 m -65 0 a 65 65 0 0 1 130 0" stroke="url(#spd)" stroke-width="14" fill="none"
-                stroke-linecap="round" stroke-dasharray="204" stroke-dashoffset="52" />
-              <!-- Needle -->
-              <line x1="140" y1="130" x2="100" y2="82" stroke="#022c1a" stroke-width="3" stroke-linecap="round" />
-              <circle cx="140" cy="130" r="8" fill="#022c1a" />
-              <circle cx="140" cy="130" r="4" fill="#2ECC80" />
-              <!-- Labels -->
-              <text x="140" y="158" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="22"
-                fill="#022c1a">50%</text>
-              <text x="140" y="174" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#1A9E5C"
-                data-i18n="why.faster_label">Plus rapide</text>
-              <!-- Small stat pills -->
-              <rect x="35" y="40" width="72" height="28" rx="8" fill="#ecfdf5" stroke="#d1fae5" />
-              <text x="71" y="49" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#0D6B3E"
-                font-weight="600" data-i18n="why.startup">Démarrage</text>
-              <text x="71" y="60" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#022c1a"
-                font-weight="700">0.4s</text>
-              <rect x="173" y="40" width="72" height="28" rx="8" fill="#ecfdf5" stroke="#d1fae5" />
-              <text x="209" y="49" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#0D6B3E"
-                font-weight="600" data-i18n="why.loading">Chargement</text>
-              <text x="209" y="60" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#022c1a"
-                font-weight="700">1.2s</text>
-            </svg>
-          </div>
+        <div class="why-visual" style="order:0;background:transparent;padding:0">
+          <!-- Performance Video -->
+          <video autoplay loop muted playsinline
+            style="width:100%;height:100%;object-fit:cover;border-radius:24px;box-shadow:0 8px 24px rgba(6,78,43,0.15);display:block">
+            <source src="Performance_speedometer_widget_202604011232.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div style="order:1">
           <p class="why-tag" data-i18n="why.performance">Performance</p>
