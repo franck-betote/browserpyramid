@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pyramide | Le meilleur de l'internet en Afrique</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { em: { 950: '#022c1a', 900: '#064E2B', 800: '#0D6B3E', 700: '#1A9E5C', 600: '#22c55e', 500: '#2ECC80', 400: '#6ee7b7', 100: '#d1fae5', 50: '#ecfdf5' } }, fontFamily: { inter: ['Inter', 'sans-serif'] }, keyframes: { fadeUp: { '0%': { opacity: '0', transform: 'translateY(28px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } }, pulseDot: { '0%,100%': { opacity: '1', transform: 'scale(1)' }, '50%': { opacity: '.4', transform: 'scale(1.5)' } } }, animation: { 'fade-up': 'fadeUp .7s ease both', 'fade-up-1': 'fadeUp .7s .12s ease both', 'fade-up-2': 'fadeUp .7s .22s ease both', 'fade-up-3': 'fadeUp .7s .32s ease both', 'fade-up-4': 'fadeUp .7s .42s ease both', 'fade-up-5': 'fadeUp .7s .52s ease both', 'dot': 'pulseDot 2s infinite' } } } }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-white text-em-950 overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav class="nav-glass fixed top-0 inset-x-0 z-50 border-b border-em-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
+      <a href="#"><img src="pyramid-browser (2).png" alt="Pyramide" class="h-9" /></a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#why" class="text-sm font-medium text-em-800 hover:text-em-700 transition-colors"
+          data-i18n="nav.about">À propos</a>
+        <a href="#ecosystem-3d" class="text-sm font-medium text-em-800 hover:text-em-700 transition-colors"
+          data-i18n="nav.ecosystem">Écosystème</a>
+        <!-- Language Toggle Button -->
+        <div class="lang-toggle" id="langToggle" role="button" tabindex="0">
+          <div class="lang-slider" id="langSlider"></div>
+          <span class="lang-option active" id="langFR" data-lang="fr">FR</span>
+          <span class="lang-option" id="langEN" data-lang="en">EN</span>
+        </div>
+        <a href="#cta"
+          class="flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-br from-em-900 to-em-700 text-white text-sm font-semibold shadow-[0_4px_14px_rgba(13,107,62,.3)] hover:-translate-y-0.5 transition-all"
+          data-i18n="nav.download">
+          <span class="material-icons" style="font-size:16px">download</span>Télécharger
+        </a>
+      </div>
+      <!-- Burger Button (mobile) -->
+      <button class="burger-btn md:hidden" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu md:hidden">
+    <div class="mobile-menu-content">
+      <a href="#why" data-i18n="nav.about">À propos</a>
+      <a href="#ecosystem-3d" data-i18n="nav.ecosystem">Écosystème</a>
+      <a href="#cta" class="flex items-center justify-center gap-2" data-i18n="nav.download_mobile">
+        <span class="material-icons" style="font-size:16px">download</span>Télécharger
+      </a>
+    </div>
+  </div>
+
+
+  <!-- HERO -->
+  <!-- =========== HERO =========== -->
+  <section class="hero-section" id="hero">
+
+    <!-- Ambient glow -->
+    <div class="hero-glow"></div>
+
+    <!-- Animated wave layers -->
+    <div class="wave-container">
+      <!-- Wave 1 — deepest -->
+      <svg class="wave-layer" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0,192 C180,256 360,128 540,192 C720,256 900,320 1080,256 C1260,192 1350,128 1440,160 L1440,320 L0,320 Z"
+          fill="#2ECC80" />
+        <path
+          d="M0,192 C180,256 360,128 540,192 C720,256 900,320 1080,256 C1260,192 1350,128 1440,160 L1440,320 L0,320 Z"
+          fill="#2ECC80" transform="translate(720,0)" />
+      </svg>
+      <!-- Wave 2 -->
+      <svg class="wave-layer" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,224 C240,160 480,288 720,224 C960,160 1200,240 1440,200 L1440,320 L0,320 Z" fill="#1A9E5C" />
+        <path d="M0,224 C240,160 480,288 720,224 C960,160 1200,240 1440,200 L1440,320 L0,320 Z" fill="#1A9E5C"
+          transform="translate(720,0)" />
+      </svg>
+      <!-- Wave 3 — topmost -->
+      <svg class="wave-layer" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,256 C360,192 720,320 1080,256 C1260,224 1380,200 1440,220 L1440,320 L0,320 Z" fill="#6ee7b7" />
+        <path d="M0,256 C360,192 720,320 1080,256 C1260,224 1380,200 1440,220 L1440,320 L0,320 Z" fill="#6ee7b7"
+          transform="translate(720,0)" />
+      </svg>
+    </div>
+
+    <!-- 3D Gem canvas — top right -->
+    <canvas id="hero-gem"></canvas>
+
+    <!-- Main content -->
+    <div class="hero-content">
+
+
+      <!-- Headline -->
+      <h1 class="hero-headline">
+        <span class="line-1">PYRAMID <span class="green-word" data-i18n="hero.browser">BROWSER</span></span>
+        <span class="line-2" data-i18n="hero.line2">POUR UNE NAVIGATION ULTRA-RAPIDE</span>
+        <span class="line-3" data-i18n="hero.line3">SÉCURISÉE ET OPTIMISÉE SUR LE WEB</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="animate-fade-up-2 text-base leading-relaxed max-w-xl mx-auto mb-9" style="color:#3d6650">
+        <span data-i18n="hero.subtitle">Navigation sécurisée, privée et ultra-rapide — pensée pour l'Afrique.</span>
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="animate-fade-up-3 flex flex-wrap gap-3 justify-center mb-10">
+        <a href="#download"
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-white font-semibold text-sm hover:-translate-y-1 transition-all"
+          style="background:linear-gradient(135deg,#064E2B,#1A9E5C);box-shadow:0 6px 28px rgba(13,107,62,.35)">
+          <span class="material-icons" style="font-size:18px">download</span>
+          <span data-i18n="hero.cta_download">Télécharger Maintenant</span>
+        </a>
+        <a href="#why"
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-sm transition-all"
+          style="border:2px solid #1A9E5C;color:#064E2B;background:rgba(255,255,255,.7);backdrop-filter:blur(6px)"
+          onmouseover="this.style.background='rgba(236,253,245,.9)'"
+          onmouseout="this.style.background='rgba(255,255,255,.7)'">
+          <span data-i18n="hero.cta_learn">En savoir plus</span>
+        </a>
+      </div>
+
+      <!-- Trust pills -->
+      <div class="animate-fade-up-4 flex flex-wrap gap-6 justify-center">
+        <div class="flex items-center gap-2 text-sm font-medium" style="color:#0D6B3E">
+          <span class="material-icons" style="font-size:17px;color:#1A9E5C">verified_user</span><span
+            data-i18n="hero.trust_platforms">Android · iOS · Desktop</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm font-medium" style="color:#0D6B3E">
+          <span class="material-icons" style="font-size:17px;color:#1A9E5C">speed</span>
+          <span data-i18n="hero.trust_speed">50% plus rapide</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm font-medium" style="color:#0D6B3E">
+          <span class="material-icons" style="font-size:17px;color:#1A9E5C">lock</span>
+          <span data-i18n="hero.trust_free">Gratuit & Souverain</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- DEVICE PREVIEWS -->
+  <div class="animate-fade-up-4 mt-8 relative z-10 flex justify-center px-4">
+    <div class="device-preview-container">
+      <!-- TABLET -->
+      <div class="device-tablet-wrapper">
+        <img src="pyramid-tablet.png" alt="Pyramid Browser Tablet" />
+      </div>
+      <!-- MOBILE - overlapping left and bottom -->
+      <div class="device-phone-wrapper">
+        <img src="pyramid-phone.png" alt="Pyramid Browser Mobile" />
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- WHY – EDGE STYLE -->
+  <section id="why" class="py-16 px-6" style="background:#fff">
+    <div class="max-w-5xl mx-auto">
+      <div class="reveal text-center mb-4">
+        <p class="text-[.72rem] font-bold tracking-[.15em] uppercase text-em-800" data-i18n="why.title">Pourquoi
+          Pyramide ?</p>
+      </div>
+
+      <!-- Block 1: Visual LEFT, Text RIGHT -->
+      <div class="why-block reveal">
+        <div class="why-visual" style="order:0;background:transparent;padding:0">
+          <!-- Performance Video -->
+          <video autoplay loop muted playsinline
+            style="width:100%;height:100%;object-fit:cover;border-radius:24px;box-shadow:0 8px 24px rgba(6,78,43,0.15);display:block">
+            <source src="Add_simple_smooth_202604071051.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div style="order:1">
+          <p class="why-tag" data-i18n="why.performance">Performance</p>
+          <h2 class="why-title" data-i18n="why.performance_title">Atteignez plus de <strong
+              style="color:#022c1a">performance</strong></h2>
+          <p class="why-desc" data-i18n="why.performance_desc">Restez concentré avec Pyramide, conçu avec une
+            optimisation profonde des ressources et des fonctionnalités avancées pour vous aider à profiter au maximum
+            de chaque minute.</p>
+          <div class="why-bullet">
+            <div class="why-bullet-icon"><span class="material-icons">bolt</span></div><span
+              data-i18n="why.bullet_resource">Économiseur de ressources réseau</span>
+          </div>
+          <div class="why-bullet">
+            <div class="why-bullet-icon"><span class="material-icons">speed</span></div><span
+              data-i18n="why.bullet_startup">Démarrage ultra-rapide</span>
+          </div>
+          <div class="why-bullet">
+            <div class="why-bullet-icon"><span class="material-icons">tab</span></div><span
+              data-i18n="why.bullet_tabs">Onglets en veille intelligente</span>
+          </div>
+          <p class="why-note" data-i18n="why.note_performance">Chargez vos pages jusqu'à 50% plus vite, même sur réseau
+            3G.</p>
+
+        </div>
+      </div>
+
+      <!-- Block 2: Text LEFT, Visual RIGHT -->
+      <div class="why-block reveal">
+        <div>
+          <p class="why-tag" data-i18n="why.security">Sécurité</p>
+          <h2 class="why-title" data-i18n="why.security_title">Restez <strong style="color:#022c1a">plus en
+              sécurité</strong> en ligne</h2>
+          <p class="why-desc" data-i18n="why.security_desc">En matière de sécurité en ligne, Pyramide veille sur vous.
+            Doté de fonctionnalités de sécurité renforcées et de contrôles avancés, Pyramide facilite la protection
+            contre les menaces.</p>
+
+          <div class="why-bullet">
+            <div class="why-bullet-icon"><span class="material-icons">key</span></div><span
+              data-i18n="why.bullet_password">Gestion des mots de passe chiffrés</span>
+          </div>
+          <div class="why-bullet">
+            <div class="why-bullet-icon"><span class="material-icons">shield</span></div><span
+              data-i18n="why.bullet_protection">Protection contre phishing & malwares</span>
+          </div>
+          <p class="why-note" data-i18n="why.note_security">Pyramide vous permet de rester protégé pendant que vous
+            naviguez.</p>
+
+        </div>
+        <div class="why-visual" style="background:transparent;padding:0">
+          <!-- Security Video -->
+          <video autoplay loop muted playsinline
+            style="width:100%;height:100%;object-fit:cover;border-radius:24px;box-shadow:0 8px 24px rgba(6,78,43,0.15);display:block">
+            <source src="Futuristic_UI_cybersecurity_202604061449.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <!-- Block 3: Visual LEFT, Text RIGHT -->
+      <div class="why-block reveal">
+        <div class="why-visual" style="order:0;background:transparent;padding:0">
+          <!-- AI Video -->
+          <video autoplay loop muted playsinline
+            style="width:100%;height:100%;object-fit:cover;border-radius:24px;box-shadow:0 8px 24px rgba(6,78,43,0.15);display:block">
+            <source src="Animate_UI_smooth_202604071036.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div style="order:1">
+          <p class="why-tag" data-i18n="why.ai">Intelligence Artificielle</p>
+          <h2 class="why-title" data-i18n="why.ai_title">Un navigateur <strong style="color:#022c1a">conçu pour
+              l'IA</strong></h2>
+          <p class="why-desc" data-i18n="why.ai_desc">Accédez à une assistance intelligente native directement dans
+            votre navigateur. Posez vos questions, résumez des pages, traduisez du contenu — tout ça sans quitter votre
+            onglet.</p>
+          <div class="why-bullet">
+            <div class="why-bullet-icon"><span class="material-icons">smart_toy</span></div><span
+              data-i18n="why.bullet_assistant">Assistant IA intégré et multilingue</span>
+          </div>
+          <div class="why-bullet">
+            <div class="why-bullet-icon"><span class="material-icons">summarize</span></div><span
+              data-i18n="why.bullet_summary">Résumé de pages en un clic</span>
+          </div>
+          <div class="why-bullet">
+            <div class="why-bullet-icon"><span class="material-icons">translate</span></div><span
+              data-i18n="why.bullet_translation">Traduction instantanée 50+ langues</span>
+          </div>
+          <p class="why-note" data-i18n="why.note_ai">100% conçu pour les langues et réalités africaines. Swahili,
+            Haoussa, Yoruba, Amharique et plus.</p>
+        </div>
+      </div>
+  </section>
+
+  <!-- ECOSYSTEM 3D -->
+  <section id="ecosystem-3d" class="py-24 px-6">
+    <div class="stars" id="stars"></div>
+    <div class="orb"
+      style="width:300px;height:300px;background:rgba(46,204,128,.08);top:50%;left:50%;transform:translate(-50%,-50%)">
+    </div>
+    <div class="orb" style="width:160px;height:160px;background:rgba(26,158,92,.12);top:25%;left:20%"></div>
+    <div class="orb" style="width:160px;height:160px;background:rgba(26,158,92,.12);top:25%;right:20%"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="reveal text-center mb-16">
+        <span class="label-glow" data-i18n="ecosystem.label">Suite Complète</span>
+        <h2 class="font-inter font-bold mt-3 text-white" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">
+          <span data-i18n="ecosystem.title_pre">L'Écosystème </span><span
+            style="background:linear-gradient(135deg,#2ECC80,#6ee7b7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Pyramid</span>
+        </h2>
+        <p class="mt-3 text-sm leading-relaxed max-w-md mx-auto" style="color:#ffffff" data-i18n="ecosystem.desc">
+          Une constellation d'outils digitaux souverains interconnectés autour d'une vision unique.
+        </p>
+      </div>
+
+      <div class="reveal eco-duo">
+        <!-- LEFT: Pyramid Pay -->
+        <div class="eco-card" style="position:relative">
+          <div class="eco-connector right-conn"></div>
+          <div class="eco-icon"
+            style="background:linear-gradient(135deg,rgba(46,204,128,.15),rgba(13,107,62,.25));padding:0;display:flex;align-items:center;justify-content:center">
+            <img src="icon-pyramid-play-black.svg" alt="Pyramid Play" style="width:32px;height:32px" />
+          </div>
+          <span class="badge-pill badge-soon" data-i18n="ecosystem.coming_soon">Bientôt</span>
+          <h3>Pyramid Play</h3>
+          <p style="color:#fff" data-i18n="ecosystem.play_desc">Streamer en toute sécurité partout sur le continent
+            africain et bien plus.
+          </p>
+          <span class="eco-link"><span data-i18n="ecosystem.available_soon">Bientôt disponible</span> <span
+              class="material-icons"
+              style="font-size:13px;background:linear-gradient(90deg,#2ECC80,#6ee7b7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">arrow_forward</span></span>
+        </div>
+
+        <!-- CENTER: 3D Pyramid -->
+        <div style="display:flex;flex-direction:column;align-items:center;gap:20px">
+          <canvas id="pyramid-canvas" width="340" height="420" style="display:block"></canvas>
+        </div>
+
+        <!-- RIGHT: Pyramid Mail -->
+        <div class="eco-card" style="position:relative">
+          <div class="eco-connector left-conn"></div>
+          <div class="eco-icon"
+            style="background:linear-gradient(135deg,rgba(26,158,92,.2),rgba(6,78,43,.3));padding:0;display:flex;align-items:center;justify-content:center">
+            <img src="Icon-PyramidMail-noir.svg" alt="Pyramid Mail" style="width:32px;height:32px" />
+          </div>
+          <span class="badge-pill badge-live" data-i18n="ecosystem.available">Disponible</span>
+          <h3>Pyramid Mail</h3>
+          <p style="color:#fff" data-i18n="ecosystem.mail_desc">Communication chiffrée de bout en bout, hébergée sur le
+            sol africain. Votre vie privée, notre priorité.</p>
+          <a href="#" class="eco-link"><span data-i18n="ecosystem.mail_cta">S'inscrire gratuitement</span> <span
+              class="material-icons"
+              style="font-size:13px;background:linear-gradient(90deg,#2ECC80,#6ee7b7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">arrow_forward</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section id="cta" class="cta-bg py-28 px-6 text-center relative overflow-hidden">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-[600px] h-[600px] rounded-full bg-em-700/5"></div>
+    </div>
+    <div class="relative max-w-3xl mx-auto reveal">
+      <span class="text-[.72rem] font-bold tracking-[.15em] uppercase text-em-800" data-i18n="cta.label">Rejoignez le
+        mouvement</span>
+      <h2 class="font-inter font-bold mt-3 text-em-950" style="font-size:clamp(1.8rem,4vw,3rem)"><span
+          data-i18n="cta.title_pre">PYRAMID </span><span class="text-grad-hero"
+          data-i18n="cta.title_post">BROWSER</span></h2>
+      <p class="mt-4 text-em-700 text-base leading-relaxed max-w-lg mx-auto" data-i18n="cta.desc">Rejoignez des millions
+        d'utilisateurs qui ont déjà fait le choix de la vitesse, de la liberté et de la sécurité.</p>
+      <div class="flex flex-wrap gap-3 justify-center mt-10">
+        <a href="#"
+          class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-br from-em-900 to-em-700 text-white font-semibold shadow-[0_6px_24px_rgba(13,107,62,.35)] hover:-translate-y-1 transition-all">
+          <span class="material-icons" style="font-size:18px">download</span><span data-i18n="cta.download">Télécharger
+            Pyramide</span>
+        </a>
+        <a href="#why"
+          class="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-em-600 text-em-800 font-semibold hover:bg-em-50 transition-colors"
+          data-i18n="cta.learn_more">En savoir plus</a>
+      </div>
+      <p class="mt-5 text-xs text-em-600" data-i18n="cta.note">Gratuit · Aucune carte requise · Disponible partout en
+        Afrique et dans le monde</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="px-6 pt-8 pb-6">
+    <div class="footer-gradient"></div>
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-8" style="border-bottom:1px solid #e0e0e0">
+        <!-- Brand -->
+        <div class="lg:col-span-2">
+          <img src="pyramid-browser (2).png" alt="Pyramide" class="h-6 mb-3" />
+          <p class="text-[10px] leading-relaxed max-w-xs mb-3" style="color:#616161;font-family:'Inter',sans-serif"
+            data-i18n="footer.desc">
+            Bâtir les infrastructures numériques de l'Afrique de demain.
+          </p>
+          <div class="flex gap-2">
+            <a href="#" class="social-btn" style="color:#616161">
+              <span class="material-icons" style="font-size:13px">public</span>
+            </a>
+            <a href="#" class="social-btn" style="color:#616161">
+              <span class="material-icons" style="font-size:13px">alternate_email</span>
+            </a>
+            <a href="#" class="social-btn" style="color:#616161">
+              <span class="material-icons" style="font-size:13px">groups</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links 1 -->
+        <div>
+          <h4 class="text-[9px] font-semibold uppercase tracking-widest mb-3 text-em-900"
+            style="font-family:'Inter',sans-serif" data-i18n="footer.product">Produit</h4>
+          <div class="flex flex-col gap-1.5 text-[10px]" style="font-family:'Inter',sans-serif">
+            <a href="#" class="footer-link" data-i18n="footer.features">Fonctionnalités</a>
+            <a href="#" class="footer-link" data-i18n="footer.download">Télécharger</a>
+            <a href="#" class="footer-link" data-i18n="footer.updates">Mises à jour</a>
+          </div>
+        </div>
+
+        <!-- Links 2 -->
+        <div>
+          <h4 class="text-[9px] font-semibold uppercase tracking-widest mb-3 text-em-900"
+            style="font-family:'Inter',sans-serif" data-i18n="footer.company">Entreprise</h4>
+          <div class="flex flex-col gap-1.5 text-[10px]" style="font-family:'Inter',sans-serif">
+            <a href="#" class="footer-link" data-i18n="footer.about">À propos</a>
+            <a href="#" class="footer-link" data-i18n="footer.contact">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="flex flex-col md:flex-row justify-between items-center gap-2 pt-4 text-[9px]"
+        style="color:#9e9e9e;font-family:'Inter',sans-serif">
+        <span data-i18n="footer.copyright">© 2026 Pyramide. Tous droits réservés.</span>
+        <div class="flex gap-3">
+          <a href="#" class="footer-link" data-i18n="footer.privacy">Confidentialité</a>
+          <a href="#" class="footer-link" data-i18n="footer.terms">Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    // ===== i18n TRANSLATION SYSTEM =====
+    const translations = {
+      fr: {
+        "nav.about": "À propos",
+        "nav.ecosystem": "Écosystème",
+        "nav.download": "<span class=\"material-icons\" style=\"font-size:16px\">download</span>Télécharger",
+        "nav.download_mobile": "<span class=\"material-icons\" style=\"font-size:16px\">download</span>Télécharger",
+        "hero.brand": "PYRAMID",
+        "hero.browser": "BROWSER",
+        "hero.line2": "POUR UNE NAVIGATION ULTRA-RAPIDE",
+        "hero.line3": "SÉCURISÉE ET OPTIMISÉE SUR LE WEB",
+        "hero.subtitle": "Navigation sécurisée, privée et ultra-rapide — pensée pour l'Afrique.",
+        "hero.cta_download": "Télécharger Maintenant",
+        "hero.cta_learn": "En savoir plus",
+        "hero.trust_platforms": "Android · iOS · Desktop",
+        "hero.trust_speed": "50% plus rapide",
+        "hero.trust_free": "Gratuit & Souverain",
+        "device.data_save": "-60% data",
+        "device.faster": "50% plus rapide",
+        "why.title": "Pourquoi Pyramide ?",
+        "why.faster_label": "Plus rapide",
+        "why.startup": "Démarrage",
+        "why.loading": "Chargement",
+        "why.performance": "Performance",
+        "why.performance_title": "Atteignez plus de <strong style=\"color:#022c1a\">performance</strong>",
+        "why.performance_desc": "Restez concentré avec Pyramide, conçu avec une optimisation profonde des ressources et des fonctionnalités avancées pour vous aider à profiter au maximum de chaque minute.",
+        "why.bullet_resource": "Économiseur de ressources réseau",
+        "why.bullet_startup": "Démarrage ultra-rapide",
+        "why.bullet_tabs": "Onglets en veille intelligente",
+        "why.note_performance": "Chargez vos pages jusqu'à 50% plus vite, même sur réseau 3G.",
+        "why.security": "Sécurité",
+        "why.security_title": "Restez <strong style=\"color:#022c1a\">plus en sécurité</strong> en ligne",
+        "why.security_desc": "En matière de sécurité en ligne, Pyramide veille sur vous. Doté de fonctionnalités de sécurité renforcées et de contrôles avancés, Pyramide facilite la protection contre les menaces.",
+        "why.bullet_password": "Gestion des mots de passe chiffrés",
+        "why.bullet_protection": "Protection contre phishing & malwares",
+        "why.note_security": "Pyramide vous permet de rester protégé pendant que vous naviguez.",
+        "why.ai": "Intelligence Artificielle",
+        "why.ai_title": "Un navigateur <strong style=\"color:#022c1a\">conçu pour l'IA</strong>",
+        "why.ai_desc": "Accédez à une assistance intelligente native directement dans votre navigateur. Posez vos questions, résumez des pages, traduisez du contenu — tout ça sans quitter votre onglet.",
+        "why.bullet_assistant": "Assistant IA intégré et multilingue",
+        "why.bullet_summary": "Résumé de pages en un clic",
+        "why.bullet_translation": "Traduction instantanée 50+ langues",
+        "why.note_ai": "100% conçu pour les langues et réalités africaines. Swahili, Haoussa, Yoruba, Amharique et plus.",
+        "ecosystem.label": "Suite Complète",
+        "ecosystem.title_pre": "L'Écosystème ",
+        "ecosystem.desc": "Une constellation d'outils digitaux souverains interconnectés autour d'une vision unique.",
+        "ecosystem.coming_soon": "Bientôt",
+        "ecosystem.play_desc": "Streamer en toute sécurité partout sur le continent africain et bien plus.",
+        "ecosystem.available_soon": "Bientôt disponible",
+        "ecosystem.available": "Disponible",
+        "ecosystem.mail_desc": "Communication chiffrée de bout en bout, hébergée sur le sol africain. Votre vie privée, notre priorité.",
+        "ecosystem.mail_cta": "S'inscrire gratuitement",
+        "cta.label": "Rejoignez le mouvement",
+        "cta.title_pre": "PRÊT POUR LA ",
+        "cta.title_post": "RENAISSANCE?",
+        "cta.desc": "Rejoignez des millions d'utilisateurs qui ont déjà fait le choix de la vitesse, de la liberté et de la sécurité.",
+        "cta.download": "Télécharger Pyramide",
+        "cta.learn_more": "En savoir plus",
+        "cta.note": "Gratuit · Aucune carte requise · Disponible partout en Afrique et dans le monde",
+        "footer.desc": "Bâtir les infrastructures numériques de l'Afrique de demain.",
+        "footer.product": "Produit",
+        "footer.features": "Fonctionnalités",
+        "footer.download": "Télécharger",
+        "footer.updates": "Mises à jour",
+        "footer.company": "Entreprise",
+        "footer.about": "À propos",
+        "footer.contact": "Contact",
+        "footer.copyright": "© 2026 Pyramide. Tous droits réservés.",
+        "footer.privacy": "Confidentialité",
+        "footer.terms": "Conditions"
+      },
+      en: {
+        "nav.about": "About",
+        "nav.ecosystem": "Ecosystem",
+        "nav.download": "<span class=\"material-icons\" style=\"font-size:16px\">download</span>Download",
+        "nav.download_mobile": "<span class=\"material-icons\" style=\"font-size:16px\">download</span>Download",
+        "hero.brand": "PYRAMID",
+        "hero.browser": "BROWSER",
+        "hero.line2": "FOR ULTRA-FAST SECURE BROWSING",
+        "hero.line3": "AND OPTIMIZED FOR THE WEB",
+        "hero.subtitle": "Secure, private, and ultra-fast browsing — built for Africa.",
+        "hero.cta_download": "Download Now",
+        "hero.cta_learn": "Learn More",
+        "hero.trust_platforms": "Android · iOS · Desktop",
+        "hero.trust_speed": "50% faster",
+        "hero.trust_free": "Free & Sovereign",
+        "device.data_save": "-60% data",
+        "device.faster": "50% faster",
+        "why.title": "Why Pyramide?",
+        "why.faster_label": "Faster",
+        "why.startup": "Startup",
+        "why.loading": "Loading",
+        "why.performance": "Performance",
+        "why.performance_title": "Achieve more <strong style=\"color:#022c1a\">performance</strong>",
+        "why.performance_desc": "Stay focused with Pyramide, built with deep resource optimization and advanced features to help you make the most of every minute.",
+        "why.bullet_resource": "Network resource saver",
+        "why.bullet_startup": "Ultra-fast startup",
+        "why.bullet_tabs": "Smart tab hibernation",
+        "why.note_performance": "Load pages up to 50% faster, even on 3G networks.",
+        "why.security": "Security",
+        "why.security_title": "Stay <strong style=\"color:#022c1a\">more secure</strong> online",
+        "why.security_desc": "When it comes to online security, Pyramide has your back. With enhanced security features and advanced controls, Pyramide makes it easy to protect against threats.",
+        "why.bullet_password": "Encrypted password management",
+        "why.bullet_protection": "Protection against phishing & malware",
+        "why.note_security": "Pyramide keeps you protected while you browse.",
+        "why.ai": "Artificial Intelligence",
+        "why.ai_title": "A browser <strong style=\"color:#022c1a\">built for AI</strong>",
+        "why.ai_desc": "Access native intelligent assistance directly in your browser. Ask questions, summarize pages, translate content — all without leaving your tab.",
+        "why.bullet_assistant": "Built-in multilingual AI assistant",
+        "why.bullet_summary": "One-click page summaries",
+        "why.bullet_translation": "Instant translation in 50+ languages",
+        "why.note_ai": "100% designed for African languages and realities. Swahili, Hausa, Yoruba, Amharic and more.",
+        "ecosystem.label": "Complete Suite",
+        "ecosystem.title_pre": "The Pyramid ",
+        "ecosystem.desc": "A constellation of interconnected sovereign digital tools around a single vision.",
+        "ecosystem.coming_soon": "Coming Soon",
+        "ecosystem.play_desc": "Stream securely everywhere across the African continent and beyond.",
+        "ecosystem.available_soon": "Coming soon",
+        "ecosystem.available": "Available",
+        "ecosystem.mail_desc": "End-to-end encrypted communication, hosted on African soil. Your privacy, our priority.",
+        "ecosystem.mail_cta": "Sign up for free",
+        "cta.label": "Join the movement",
+        "cta.title_pre": "READY FOR THE ",
+        "cta.title_post": "RENAISSANCE?",
+        "cta.desc": "Join millions of users who have already chosen speed, freedom, and security.",
+        "cta.download": "Download Pyramide",
+        "cta.learn_more": "Learn more",
+        "cta.note": "Free · No card required · Available across Africa and worldwide",
+        "footer.desc": "Building Africa's digital infrastructure of tomorrow.",
+        "footer.product": "Product",
+        "footer.features": "Features",
+        "footer.download": "Download",
+        "footer.updates": "Updates",
+        "footer.company": "Company",
+        "footer.about": "About",
+        "footer.contact": "Contact",
+        "footer.copyright": "© 2026 Pyramide. All rights reserved.",
+        "footer.privacy": "Privacy",
+        "footer.terms": "Terms"
+      }
+    };
+
+    let currentLang = localStorage.getItem('pyramide-lang') || 'fr';
+
+    function applyTranslations(lang) {
+      currentLang = lang;
+      localStorage.setItem('pyramide-lang', lang);
+
+      // Update lang label
+      const langLabel = document.getElementById('langLabel');
+      if (langLabel) {
+        langLabel.textContent = lang.toUpperCase();
+      }
+
+      // Update html lang attribute
+      document.documentElement.lang = lang;
+
+      // Translate all elements with data-i18n
+      const translatableElements = document.querySelectorAll('[data-i18n]');
+      translatableElements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    }
+
+    // Language toggle button
+    document.addEventListener('DOMContentLoaded', () => {
+      const langToggle = document.getElementById('langToggle');
+      const langSlider = document.getElementById('langSlider');
+      const langFR = document.getElementById('langFR');
+      const langEN = document.getElementById('langEN');
+
+      function updateToggle(lang) {
+        if (lang === 'en') {
+          langSlider.classList.add('right');
+          langFR.classList.remove('active');
+          langEN.classList.add('active');
+        } else {
+          langSlider.classList.remove('right');
+          langFR.classList.add('active');
+          langEN.classList.remove('active');
+        }
+      }
+
+      if (langToggle) {
+        langToggle.addEventListener('click', () => {
+          const newLang = currentLang === 'fr' ? 'en' : 'fr';
+          applyTranslations(newLang);
+          updateToggle(newLang);
+        });
+      }
+
+      // Apply saved language on load
+      applyTranslations(currentLang);
+      updateToggle(currentLang);
+    });
+
+    // ===== EXISTING SCRIPTS =====
+    // MOBILE MENU TOGGLE
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const burger = document.querySelector('.burger-btn');
+      menu.classList.toggle('active');
+      burger.classList.toggle('active');
+    }
+
+    // FAQ TOGGLE
+    function toggleFaq(button) {
+      const item = button.closest('.faq-item');
+      const wasActive = item.classList.contains('active');
+
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-item').forEach(faq => {
+        faq.classList.remove('active');
+      });
+
+      // Toggle current item
+      if (!wasActive) {
+        item.classList.add('active');
+      }
+    }
+
+    // REVEAL
+    const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }), { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+    // BARS
+    const bo = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('.bar-inner').forEach(b => b.classList.add('on')); bo.unobserve(e.target) } }), { threshold: .2 });
+    document.querySelectorAll('#why').forEach(el => bo.observe(el));
+
+    // STARS
+    (function () { const c = document.getElementById('stars'); for (let i = 0; i < 55; i++) { const s = document.createElement('div'); s.className = 'star'; const sz = Math.random() * 2 + .5; s.style.cssText = `width:${sz}px;height:${sz}px;left:${Math.random() * 100}%;top:${Math.random() * 100}%;animation-delay:${Math.random() * 3}s;animation-duration:${2 + Math.random() * 3}s`; c.appendChild(s) } })();
+
+    // 3D PYRAMID
+    (function () {
+      const canvas = document.getElementById('pyramid-canvas');
+      const W = 340, H = 420;
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setSize(W, H); renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setClearColor(0x000000, 0);
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(42, W / H, .1, 100);
+      camera.position.set(0, 1.2, 6); camera.lookAt(0, 0, 0);
+
+      const geo = new THREE.ConeGeometry(1.8, 3, 4, 1, false);
+      const cols = []; const pos = geo.attributes.position;
+      for (let i = 0; i < pos.count; i++) { const y = pos.getY(i); const t = (y + 1.5) / 3; cols.push(.06 * (1 - t) + .18 * t, .3 * (1 - t) + .8 * t, .24 * (1 - t) + .5 * t) }
+      geo.setAttribute('color', new THREE.Float32BufferAttribute(cols, 3));
+
+      const mat = new THREE.MeshPhongMaterial({ vertexColors: true, shininess: 140, specular: new THREE.Color(0x2ECC80), transparent: true, opacity: .92 });
+      const pyramid = new THREE.Mesh(geo, mat); pyramid.rotation.y = Math.PI / 4; scene.add(pyramid);
+
+      const wireMat = new THREE.MeshBasicMaterial({ color: 0x2ECC80, wireframe: true, transparent: true, opacity: .22 });
+      const wire = new THREE.Mesh(geo.clone(), wireMat); wire.rotation.y = Math.PI / 4; scene.add(wire);
+
+      const edgesGeo = new THREE.EdgesGeometry(geo);
+      const edgeMat = new THREE.LineBasicMaterial({ color: 0x6ee7b7, transparent: true, opacity: .7 });
+      const edges = new THREE.LineSegments(edgesGeo, edgeMat); edges.rotation.y = Math.PI / 4; scene.add(edges);
+
+      // Particles
+      const pc = 70, pGeo = new THREE.BufferGeometry(), pp = [], pv = [];
+      for (let i = 0; i < pc; i++) { const r = 2.2 + Math.random() * 1.8, th = Math.random() * Math.PI * 2, ph = Math.random() * Math.PI; pp.push(r * Math.sin(ph) * Math.cos(th), (Math.random() - .5) * 4, r * Math.sin(ph) * Math.sin(th)); pv.push((Math.random() - .5) * .003, (Math.random() - .5) * .003, (Math.random() - .5) * .003) }
+      pGeo.setAttribute('position', new THREE.Float32BufferAttribute(pp, 3));
+      const pts = new THREE.Points(pGeo, new THREE.PointsMaterial({ color: 0x2ECC80, size: .055, transparent: true, opacity: .65 }));
+      scene.add(pts);
+
+      // Apex glow
+      const apx = new THREE.Mesh(new THREE.SphereGeometry(.13, 16, 16), new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: .95 }));
+      apx.position.y = 1.5; scene.add(apx);
+
+      // Rings
+      const mkRing = (ri, ro2, op, c) => { const r = new THREE.Mesh(new THREE.RingGeometry(ri, ro2, 64), new THREE.MeshBasicMaterial({ color: c, side: THREE.DoubleSide, transparent: true, opacity: op })); r.rotation.x = -Math.PI / 2; r.position.y = -1.5; return r };
+      const ring1 = mkRing(1.85, 2.05, .14, 0x2ECC80); scene.add(ring1);
+      const ring2 = mkRing(2.2, 2.35, .09, 0x064E2B); scene.add(ring2);
+
+      // Lights
+      scene.add(new THREE.AmbientLight(0x0D6B3E, 1.3));
+      const dl = new THREE.DirectionalLight(0x2ECC80, 2.8); dl.position.set(3, 5, 3); scene.add(dl);
+      scene.add(new THREE.DirectionalLight(0x064E2B, 1.5).position.set(-3, -2, 2));
+      const pl = new THREE.PointLight(0x6ee7b7, 2.2, 10); pl.position.set(0, 3, 2); scene.add(pl);
+
+      let tRY = 0, tRX = 0, cRY = 0, cRX = 0, auto = true, tick = 0;
+      canvas.addEventListener('mousemove', e => { const r = canvas.getBoundingClientRect(); tRY = (e.clientX - r.left) / r.width - .5; tRX = -((e.clientY - r.top) / r.height - .5); tRY *= Math.PI * .6; tRX *= Math.PI * .25; auto = false });
+      canvas.addEventListener('mouseleave', () => { auto = true });
+
+      function animate() {
+        requestAnimationFrame(animate); tick += .01;
+        if (auto) { cRY += (tick * .28 - cRY) * .02; cRX += (Math.sin(tick * .18) * .08 - cRX) * .02 }
+        else { cRY += (tRY - cRY) * .06; cRX += (tRX - cRX) * .06 }
+        [pyramid, wire, edges].forEach(m => { m.rotation.y = Math.PI / 4 + cRY; m.rotation.x = cRX });
+        apx.scale.setScalar(.9 + Math.sin(tick * 3) * .1);
+        ring1.rotation.z = tick * .14; ring2.rotation.z = -tick * .07;
+        const pa = pts.geometry.attributes.position.array;
+        for (let i = 0; i < pc; i++) { pa[i * 3] += pv[i * 3]; pa[i * 3 + 1] += pv[i * 3 + 1]; pa[i * 3 + 2] += pv[i * 3 + 2]; const d = Math.sqrt(pa[i * 3] ** 2 + pa[i * 3 + 1] ** 2 + pa[i * 3 + 2] ** 2); if (d > 4 || d < 1.8) { pv[i * 3] *= -1; pv[i * 3 + 1] *= -1; pv[i * 3 + 2] *= -1 } }
+        pts.geometry.attributes.position.needsUpdate = true;
+        pl.position.x = Math.sin(tick * .5) * 3; pl.position.z = Math.cos(tick * .5) * 3;
+        renderer.render(scene, camera);
+      }
+      animate();
+    })();
+  </script>
+</body>
+
+</html>
