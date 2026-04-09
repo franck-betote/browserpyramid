@@ -529,7 +529,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 20px;
+  gap: 4px;
 }
 
 .device-tablet-wrapper {
@@ -547,8 +547,8 @@ p {
 
 .device-phone-wrapper {
   position: relative;
-  width: 22%;
-  max-width: 240px;
+  width: 30%;
+  max-width: 320px;
   flex-shrink: 0;
 }
 
@@ -561,27 +561,27 @@ p {
 
 @media (max-width: 1024px) {
   .device-phone-wrapper {
-    width: 24%;
+    width: 28%;
   }
 }
 
 @media (max-width: 768px) {
   .device-preview-container {
-    gap: 14px;
+    gap: 2px;
   }
 
   .device-phone-wrapper {
-    width: 22%;
+    width: 26%;
   }
 }
 
 @media (max-width: 480px) {
   .device-preview-container {
-    gap: 8px;
+    gap: 0px;
   }
 
   .device-phone-wrapper {
-    width: 20%;
+    width: 24%;
   }
 }
 
