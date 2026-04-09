@@ -524,32 +524,32 @@ p {
 /* DEVICE PREVIEWS */
 .device-preview-container {
   position: relative;
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  gap: 20px;
 }
 
 .device-tablet-wrapper {
   position: relative;
+  flex-shrink: 0;
 }
 
 .device-tablet-wrapper img {
   width: 100%;
-  max-width: 700px;
+  max-width: 650px;
   height: auto;
   display: block;
   filter: drop-shadow(0 24px 64px rgba(0, 0, 0, .18));
 }
 
 .device-phone-wrapper {
-  position: absolute;
-  left: -8%;
-  bottom: -12%;
-  width: 35%;
-  max-width: 280px;
-  z-index: 10;
+  position: relative;
+  width: 22%;
+  max-width: 240px;
+  flex-shrink: 0;
 }
 
 .device-phone-wrapper img {
@@ -561,25 +561,27 @@ p {
 
 @media (max-width: 1024px) {
   .device-phone-wrapper {
-    left: -5%;
-    bottom: -10%;
-    width: 32%;
+    width: 24%;
   }
 }
 
 @media (max-width: 768px) {
+  .device-preview-container {
+    gap: 14px;
+  }
+
   .device-phone-wrapper {
-    left: -3%;
-    bottom: -8%;
-    width: 30%;
+    width: 22%;
   }
 }
 
 @media (max-width: 480px) {
+  .device-preview-container {
+    gap: 8px;
+  }
+
   .device-phone-wrapper {
-    left: 0;
-    bottom: -6%;
-    width: 28%;
+    width: 20%;
   }
 }
 
