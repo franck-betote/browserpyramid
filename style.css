@@ -529,7 +529,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 20px;
+  gap: 5px;
   padding: 0 20px;
 }
 
@@ -549,7 +549,8 @@ p {
 
 .device-phone-wrapper {
   position: relative;
-  width: 200px;
+  width: 640px;
+  max-width: 640px;
   flex-shrink: 0;
   align-self: flex-end;
 }
