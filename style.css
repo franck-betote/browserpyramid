@@ -578,8 +578,10 @@ p {
 /* PHONE - right, overlapping in front */
 .device-phone-wrapper {
   position: relative;
-  width: 340px;
-  max-width: 340px;
+  width: 420px;
+  /* Augmenté de 340px à 420px */
+  max-width: 420px;
+  /* Augmenté en conséquence */
   flex-shrink: 0;
   margin-left: -90px;
   margin-bottom: 10px;
@@ -592,7 +594,8 @@ p {
   height: auto;
   display: block;
   filter: drop-shadow(0 28px 70px rgba(6, 78, 43, .15)) drop-shadow(0 6px 20px rgba(0, 0, 0, .1));
-  border-radius: 36px;
+  border-radius: 44px;
+  /* Légèrement augmenté pour suivre la taille */
   transition: filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
