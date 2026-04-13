@@ -552,8 +552,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 80px 40px 60px;
-  min-height: 620px;
+  padding: 20px 40px 60px;
+  min-height: 520px;
 }
 
 /* TABLET - large, left, flat clean look */
@@ -667,7 +667,7 @@ p {
 @media (max-width: 1200px) {
   .device-preview-container {
     max-width: 1100px;
-    padding: 60px 30px 50px;
+    padding: 10px 30px 50px;
   }
 
   .device-tablet-wrapper {
@@ -694,8 +694,8 @@ p {
 @media (max-width: 1024px) {
   .device-preview-container {
     max-width: 850px;
-    padding: 50px 20px 40px;
-    min-height: 480px;
+    padding: 10px 20px 40px;
+    min-height: 420px;
   }
 
   .device-tablet-wrapper {
@@ -732,8 +732,8 @@ p {
 @media (max-width: 768px) {
   .device-preview-container {
     max-width: 600px;
-    padding: 40px 15px 30px;
-    min-height: 380px;
+    padding: 10px 15px 30px;
+    min-height: 340px;
   }
 
   .device-tablet-wrapper {
@@ -771,8 +771,8 @@ p {
 @media (max-width: 480px) {
   .device-preview-container {
     max-width: 380px;
-    padding: 30px 10px 20px;
-    min-height: 300px;
+    padding: 10px 10px 20px;
+    min-height: 260px;
   }
 
   .device-tablet-wrapper {
