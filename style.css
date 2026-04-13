@@ -561,7 +561,7 @@ p {
   position: relative;
   flex-shrink: 0;
   flex: 0 0 auto;
-  max-width: 1050px;
+  max-width: 900px;
 }
 
 .device-tablet-wrapper img {
@@ -595,7 +595,7 @@ p {
   }
 
   .device-tablet-wrapper {
-    max-width: 750px;
+    max-width: 640px;
   }
 
   .device-phone-wrapper {
@@ -613,7 +613,7 @@ p {
   }
 
   .device-tablet-wrapper {
-    max-width: 520px;
+    max-width: 450px;
   }
 
   .device-phone-wrapper {
@@ -632,7 +632,7 @@ p {
   }
 
   .device-tablet-wrapper {
-    max-width: 340px;
+    max-width: 300px;
   }
 
   .device-phone-wrapper {
