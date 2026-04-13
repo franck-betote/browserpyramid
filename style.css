@@ -547,23 +547,21 @@ p {
 /* DEVICE PREVIEWS */
 .device-preview-container {
   position: relative;
-  max-width: 1100px;
+  max-width: 1300px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
-  min-height: 500px;
+  padding: 60px 20px;
+  min-height: 550px;
 }
 
-/* TABLET - large, left, slight right perspective */
+/* TABLET - large, left, flat (no 3D) */
 .device-tablet-wrapper {
   position: relative;
   flex-shrink: 0;
-  width: 650px;
-  max-width: 650px;
-  transform: perspective(1200px) rotateY(-8deg);
-  transform-origin: center center;
+  width: 820px;
+  max-width: 820px;
   z-index: 1;
 }
 
@@ -571,28 +569,26 @@ p {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, .15));
+  filter: drop-shadow(0 24px 60px rgba(0, 0, 0, .18));
   border-radius: 24px;
 }
 
-/* PHONE - small, right, overlapping in front */
+/* PHONE - small, right, overlapping in front (no 3D) */
 .device-phone-wrapper {
   position: relative;
-  width: 280px;
-  max-width: 280px;
+  width: 360px;
+  max-width: 360px;
   flex-shrink: 0;
-  margin-left: -80px;
+  margin-left: -100px;
   z-index: 2;
-  transform: perspective(1200px) rotateY(5deg);
-  transform-origin: center center;
 }
 
 .device-phone-wrapper img {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 16px 40px rgba(0, 0, 0, .2));
-  border-radius: 24px;
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, .22));
+  border-radius: 32px;
 }
 
 /* Floating badges */
@@ -601,18 +597,18 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 20px;
+  padding: 14px 24px;
   border-radius: 99px;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 700;
   z-index: 10;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
   white-space: nowrap;
 }
 
 .badge-data {
   top: 20px;
-  left: 40px;
+  left: 60px;
   background: #fff;
   color: #064E2B;
   border: 2px solid #ecfdf5;
@@ -620,7 +616,7 @@ p {
 
 .badge-speed {
   bottom: 30px;
-  right: 80px;
+  right: 100px;
   background: linear-gradient(135deg, #064E2B, #1A9E5C);
   color: #fff;
 }
@@ -628,95 +624,93 @@ p {
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .device-preview-container {
-    max-width: 800px;
-    padding: 30px 15px;
-    min-height: 400px;
+    max-width: 900px;
+    padding: 40px 15px;
+    min-height: 420px;
   }
 
   .device-tablet-wrapper {
-    width: 480px;
-    max-width: 480px;
+    width: 600px;
+    max-width: 600px;
   }
 
   .device-phone-wrapper {
-    width: 210px;
-    max-width: 210px;
-    margin-left: -60px;
+    width: 260px;
+    max-width: 260px;
+    margin-left: -70px;
   }
 
   .badge-data {
     top: 10px;
-    left: 20px;
+    left: 30px;
   }
 
   .badge-speed {
     bottom: 20px;
-    right: 50px;
+    right: 60px;
   }
 }
 
 @media (max-width: 768px) {
   .device-preview-container {
-    max-width: 600px;
-    padding: 20px 10px;
-    min-height: 320px;
+    max-width: 650px;
+    padding: 30px 10px;
+    min-height: 340px;
   }
 
   .device-tablet-wrapper {
-    width: 360px;
-    max-width: 360px;
-    transform: none;
+    width: 420px;
+    max-width: 420px;
   }
 
   .device-phone-wrapper {
-    width: 160px;
-    max-width: 160px;
-    margin-left: -40px;
-    transform: none;
+    width: 180px;
+    max-width: 180px;
+    margin-left: -50px;
   }
 
   .device-badge {
-    padding: 8px 14px;
-    font-size: 0.75rem;
+    padding: 10px 16px;
+    font-size: 0.8rem;
   }
 
   .badge-data {
     top: 5px;
-    left: 10px;
+    left: 15px;
   }
 
   .badge-speed {
     bottom: 10px;
-    right: 30px;
+    right: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .device-preview-container {
-    max-width: 380px;
-    padding: 15px 5px;
-    min-height: 260px;
+    max-width: 420px;
+    padding: 20px 5px;
+    min-height: 280px;
   }
 
   .device-tablet-wrapper {
-    width: 260px;
-    max-width: 260px;
+    width: 300px;
+    max-width: 300px;
   }
 
   .device-phone-wrapper {
-    width: 120px;
-    max-width: 120px;
-    margin-left: -30px;
+    width: 130px;
+    max-width: 130px;
+    margin-left: -35px;
   }
 
   .device-badge {
-    padding: 6px 12px;
-    font-size: 0.68rem;
-    gap: 4px;
+    padding: 8px 14px;
+    font-size: 0.72rem;
+    gap: 5px;
   }
 
   .device-badge .material-icons {
-    font-size: 14px !important;
+    font-size: 15px !important;
   }
 
   .badge-data {
@@ -726,7 +720,7 @@ p {
 
   .badge-speed {
     bottom: 5px;
-    right: 15px;
+    right: 20px;
   }
 }
 
