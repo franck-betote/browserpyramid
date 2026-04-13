@@ -573,8 +573,8 @@ p {
 
 .device-phone-wrapper {
   position: relative;
-  width: 420px;
-  max-width: 420px;
+  width: 620px;
+  max-width: 620px;
   flex-shrink: 0;
   align-self: flex-end;
   margin-bottom: 40px;
@@ -598,8 +598,8 @@ p {
   }
 
   .device-phone-wrapper {
-    width: 300px;
-    max-width: 300px;
+    width: 450px;
+    max-width: 450px;
     margin-bottom: 20px;
   }
 }
@@ -616,8 +616,8 @@ p {
   }
 
   .device-phone-wrapper {
-    width: 220px;
-    max-width: 220px;
+    width: 340px;
+    max-width: 340px;
     margin-bottom: 10px;
   }
 }
@@ -635,8 +635,8 @@ p {
   }
 
   .device-phone-wrapper {
-    width: 160px;
-    max-width: 160px;
+    width: 240px;
+    max-width: 240px;
     margin-bottom: 0;
   }
 }
