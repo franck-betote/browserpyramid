@@ -563,6 +563,7 @@ p {
   width: 880px;
   max-width: 880px;
   z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .device-tablet-wrapper img {
@@ -571,7 +572,7 @@ p {
   display: block;
   filter: drop-shadow(0 32px 80px rgba(6, 78, 43, .12)) drop-shadow(0 8px 24px rgba(0, 0, 0, .08));
   border-radius: 28px;
-  background: #fff;
+  transition: filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* PHONE - right, overlapping in front */
@@ -583,6 +584,7 @@ p {
   margin-left: -90px;
   margin-bottom: 10px;
   z-index: 3;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .device-phone-wrapper img {
@@ -591,7 +593,24 @@ p {
   display: block;
   filter: drop-shadow(0 28px 70px rgba(6, 78, 43, .15)) drop-shadow(0 6px 20px rgba(0, 0, 0, .1));
   border-radius: 36px;
-  background: #fff;
+  transition: filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hover effects */
+.device-tablet-wrapper:hover {
+  transform: translateY(-8px);
+}
+
+.device-tablet-wrapper:hover img {
+  filter: drop-shadow(0 40px 100px rgba(6, 78, 43, .18)) drop-shadow(0 12px 32px rgba(0, 0, 0, .12));
+}
+
+.device-phone-wrapper:hover {
+  transform: translateY(-12px);
+}
+
+.device-phone-wrapper:hover img {
+  filter: drop-shadow(0 36px 90px rgba(6, 78, 43, .2)) drop-shadow(0 10px 28px rgba(0, 0, 0, .14));
 }
 
 /* Floating badges - premium feel */
