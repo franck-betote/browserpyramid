@@ -10,6 +10,29 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* Prevent Google Translate from disrupting layout */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+font {
+  display: inline !important;
+  border: none !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+}
+
+font * {
+  display: inherit !important;
+}
+
 /* Language Toggle Button - Sliding Pill */
 .lang-toggle {
   display: inline-flex;
@@ -529,15 +552,16 @@ p {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 5px;
+  gap: 20px;
   padding: 0 20px;
+  margin-top: -120px;
 }
 
 .device-tablet-wrapper {
   position: relative;
   flex-shrink: 0;
   flex: 1;
-  max-width: 820px;
+  max-width: 720px;
 }
 
 .device-tablet-wrapper img {
@@ -549,10 +573,11 @@ p {
 
 .device-phone-wrapper {
   position: relative;
-  width: 640px;
-  max-width: 640px;
+  width: 420px;
+  max-width: 420px;
   flex-shrink: 0;
   align-self: flex-end;
+  margin-bottom: 40px;
 }
 
 .device-phone-wrapper img {
@@ -565,29 +590,35 @@ p {
 @media (max-width: 1024px) {
   .device-preview-container {
     max-width: 800px;
+    margin-top: -80px;
   }
 
   .device-tablet-wrapper {
-    max-width: 600px;
+    max-width: 520px;
   }
 
   .device-phone-wrapper {
-    width: 160px;
+    width: 300px;
+    max-width: 300px;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .device-preview-container {
     max-width: 600px;
-    gap: 10px;
+    gap: 12px;
+    margin-top: -60px;
   }
 
   .device-tablet-wrapper {
-    max-width: 450px;
+    max-width: 380px;
   }
 
   .device-phone-wrapper {
-    width: 120px;
+    width: 220px;
+    max-width: 220px;
+    margin-bottom: 10px;
   }
 }
 
@@ -596,14 +627,17 @@ p {
     max-width: 400px;
     gap: 6px;
     padding: 0 10px;
+    margin-top: -40px;
   }
 
   .device-tablet-wrapper {
-    max-width: 320px;
+    max-width: 280px;
   }
 
   .device-phone-wrapper {
-    width: 90px;
+    width: 160px;
+    max-width: 160px;
+    margin-bottom: 0;
   }
 }
 
