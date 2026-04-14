@@ -935,7 +935,8 @@ p {
   background: linear-gradient(135deg, rgba(46, 204, 128, .08) 0%, transparent 60%);
   opacity: 0;
   transition: opacity .35s;
-  border-radius: 20px
+  border-radius: 20px;
+  pointer-events: none
 }
 
 .eco-card:hover {
