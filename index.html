@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pyramide | Le meilleur de l'internet en Afrique</title>
+  <title>Pyramid | Le meilleur de l'internet en Afrique</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = { theme: { extend: { colors: { em: { 950: '#022c1a', 900: '#064E2B', 800: '#0D6B3E', 700: '#1A9E5C', 600: '#22c55e', 500: '#2ECC80', 400: '#6ee7b7', 100: '#d1fae5', 50: '#ecfdf5' } }, fontFamily: { inter: ['Inter', 'sans-serif'] }, keyframes: { fadeUp: { '0%': { opacity: '0', transform: 'translateY(28px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } }, pulseDot: { '0%,100%': { opacity: '1', transform: 'scale(1)' }, '50%': { opacity: '.4', transform: 'scale(1.5)' } } }, animation: { 'fade-up': 'fadeUp .7s ease both', 'fade-up-1': 'fadeUp .7s .12s ease both', 'fade-up-2': 'fadeUp .7s .22s ease both', 'fade-up-3': 'fadeUp .7s .32s ease both', 'fade-up-4': 'fadeUp .7s .42s ease both', 'fade-up-5': 'fadeUp .7s .52s ease both', 'dot': 'pulseDot 2s infinite' } } } }
@@ -160,7 +160,29 @@
   </div>
   </section>
 
-  <!-- WHY – EDGE STYLE -->
+  <!-- SECTION LOGOS EN DEFILEMENT INFINI -->
+  <div class="logo-marquee-section">
+    <div class="marquee-track">
+      <!-- Première série de logos -->
+      <div class="logo-item"><img src="https://www.gsma.com/get-involved/gsma-membership/wp-content/uploads/2024/08/camtel_loho.png" alt="CAMTEL"></div>
+      <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCySudPTApEyehORlnoIMKidX4Lymw5XqtaA&s" alt="source du pays"></div>
+      <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNM4ntSkx2kMrLQni-OY_Ut23hBrIN4HHxyA&s" alt="Cyberix"></div>
+      <div class="logo-item"><img src="https://i0.wp.com/maviance.cm/wp-content/uploads/2023/06/maviance-logo-small.png?fit=640%2C136&ssl=1" alt="maviance"></div>
+      <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJYsLIVT4hQkN0n82emhTawyVkhoOMXd71YQ&s" alt="port de kribi"></div>
+      <div class="logo-item"><img src="https://www.emploi.cm/sites/emploi.cm/files/logo/nexah_web-01.jpg" alt="Nexah"></div>
+      <div class="logo-item"><img src="https://taramoney.com/favicon.svg" alt="Tara"></div>
+      <!-- Deuxième série (doublon pour l'effet infini) -->
+      <div class="logo-item"><img src="https://www.gsma.com/get-involved/gsma-membership/wp-content/uploads/2024/08/camtel_loho.png" alt="CAMTEL"></div>
+      <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCySudPTApEyehORlnoIMKidX4Lymw5XqtaA&s" alt="source du pays"></div>
+      <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNM4ntSkx2kMrLQni-OY_Ut23hBrIN4HHxyA&s" alt="Cyberix"></div>
+      <div class="logo-item"><img src="https://i0.wp.com/maviance.cm/wp-content/uploads/2023/06/maviance-logo-small.png?fit=640%2C136&ssl=1" alt="maviance"></div>
+      <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJYsLIVT4hQkN0n82emhTawyVkhoOMXd71YQ&s" alt="port de kribi"></div>
+      <div class="logo-item"><img src="https://www.emploi.cm/sites/emploi.cm/files/logo/nexah_web-01.jpg" alt="Nexah"></div>
+      <div class="logo-item"><img src="https://taramoney.com/favicon.svg" alt="Tara"></div>
+    </div>
+  </div>
+
+  <!-- SECTION WHY -->
   <section id="why" class="py-16 px-6" style="background:#fff">
     <div class="max-w-5xl mx-auto">
       <div class="reveal text-center mb-4">
@@ -183,7 +205,8 @@
           <h2 class="why-title" data-i18n="why.performance_title">Atteignez plus de <strong
               style="color:#022c1a">performance</strong></h2>
           <p class="why-desc" data-i18n="why.performance_desc">Restez concentré avec Pyramide, conçu avec une
-            optimisation profonde des ressources et des fonctionnalités avancées pour vous aider à profiter au maximum
+            optimisation profonde des ressources et des fonctionnalités avancées pour vous aider à profiter au
+            maximum
             de chaque minute.</p>
           <div class="why-bullet">
             <div class="why-bullet-icon"><span class="material-icons">bolt</span></div><span
@@ -197,7 +220,8 @@
             <div class="why-bullet-icon"><span class="material-icons">tab</span></div><span
               data-i18n="why.bullet_tabs">Onglets en veille intelligente</span>
           </div>
-          <p class="why-note" data-i18n="why.note_performance">Chargez vos pages jusqu'à 50% plus vite, même sur réseau
+          <p class="why-note" data-i18n="why.note_performance">Chargez vos pages jusqu'à 50% plus vite, même sur
+            réseau
             3G.</p>
 
         </div>
@@ -209,7 +233,8 @@
           <p class="why-tag" data-i18n="why.security">Sécurité</p>
           <h2 class="why-title" data-i18n="why.security_title">Restez <strong style="color:#022c1a">plus en
               sécurité</strong> en ligne</h2>
-          <p class="why-desc" data-i18n="why.security_desc">En matière de sécurité en ligne, Pyramide veille sur vous.
+          <p class="why-desc" data-i18n="why.security_desc">En matière de sécurité en ligne, Pyramide veille sur
+            vous.
             Doté de fonctionnalités de sécurité renforcées et de contrôles avancés, Pyramide facilite la protection
             contre les menaces.</p>
 
@@ -250,7 +275,8 @@
           <h2 class="why-title" data-i18n="why.ai_title">Un navigateur <strong style="color:#022c1a">conçu pour
               l'IA</strong></h2>
           <p class="why-desc" data-i18n="why.ai_desc">Accédez à une assistance intelligente native directement dans
-            votre navigateur. Posez vos questions, résumez des pages, traduisez du contenu — tout ça sans quitter votre
+            votre navigateur. Posez vos questions, résumez des pages, traduisez du contenu — tout ça sans quitter
+            votre
             onglet.</p>
           <div class="why-bullet">
             <div class="why-bullet-icon"><span class="material-icons">smart_toy</span></div><span
@@ -324,7 +350,8 @@
           </div>
           <span class="badge-pill badge-live" data-i18n="ecosystem.available">Bientot Disponible</span>
           <h3>Pyramid Mail</h3>
-          <p style="color:#fff" data-i18n="ecosystem.mail_desc">Communication chiffrée de bout en bout, hébergée sur le
+          <p style="color:#fff" data-i18n="ecosystem.mail_desc">Communication chiffrée de bout en bout, hébergée sur
+            le
             sol africain. Votre vie privée, notre priorité.</p>
           <a href="https://rubens-dev11.github.io/LP_PyramidMail/index.html#accueil" target="_blank"
             rel="noopener noreferrer" class="eco-link"><span data-i18n="ecosystem.mail_cta">S'inscrire
@@ -342,12 +369,14 @@
       <div class="w-[600px] h-[600px] rounded-full bg-em-700/5"></div>
     </div>
     <div class="relative max-w-3xl mx-auto reveal">
-      <span class="text-[.72rem] font-bold tracking-[.15em] uppercase text-em-800" data-i18n="cta.label">Rejoignez le
+      <span class="text-[.72rem] font-bold tracking-[.15em] uppercase text-em-800" data-i18n="cta.label">Rejoignez
+        le
         mouvement</span>
       <h2 class="font-inter font-bold mt-3 text-em-950" style="font-size:clamp(1.8rem,4vw,3rem)"><span
           data-i18n="cta.title_pre">PYRAMID </span><span class="text-grad-hero"
           data-i18n="cta.title_post">BROWSER</span></h2>
-      <p class="mt-4 text-em-700 text-base leading-relaxed max-w-lg mx-auto" data-i18n="cta.desc">Rejoignez des millions
+      <p class="mt-4 text-em-700 text-base leading-relaxed max-w-lg mx-auto" data-i18n="cta.desc">Rejoignez des
+        millions
         d'utilisateurs qui ont déjà fait le choix de la vitesse, de la liberté et de la sécurité.</p>
       <div class="flex flex-wrap gap-3 justify-center mt-10">
         <a href="#"
@@ -359,7 +388,8 @@
           class="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-em-600 text-em-800 font-semibold hover:bg-em-50 transition-colors"
           data-i18n="cta.learn_more">En savoir plus</a>
       </div>
-      <p class="mt-5 text-xs text-em-600" data-i18n="cta.note">Gratuit · Aucune carte requise · Disponible partout en
+      <p class="mt-5 text-xs text-em-600" data-i18n="cta.note">Gratuit · Aucune carte requise · Disponible partout
+        en
         Afrique et dans le monde</p>
     </div>
   </section>
@@ -478,8 +508,8 @@
         "ecosystem.mail_desc": "Communication chiffrée de bout en bout, hébergée sur le sol africain. Votre vie privée, notre priorité.",
         "ecosystem.mail_cta": "S'inscrire gratuitement",
         "cta.label": "Rejoignez le mouvement",
-        "cta.title_pre": "PRÊT POUR LA ",
-        "cta.title_post": "RENAISSANCE?",
+        "cta.title_pre": "PRÊT POUR UNE ",
+        "cta.title_post": "EXPERIENCE INEDITE?",
         "cta.desc": "Rejoignez des millions d'utilisateurs qui ont déjà fait le choix de la vitesse, de la liberté et de la sécurité.",
         "cta.download": "Télécharger Pyramid",
         "cta.learn_more": "En savoir plus",
